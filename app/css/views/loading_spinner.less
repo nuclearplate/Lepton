@@ -1,0 +1,57 @@
+.loading {
+  // top: 400%;
+  // left: 50%;
+  // width: 20px;
+  // height: 20px;
+  transform: translate(-50%, -50%);
+}
+.loading .dot {
+  // position: absolute;
+  border-radius: 50%;
+  // left: 1px;
+  // top: 1px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  animation: spin 2.5s 0s infinite both;
+}
+.loading .dot2 {
+  // position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  animation: spin2 2.5s 0s infinite both;
+}
+
+@keyframes spin {
+  0%, 100% {
+    box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white;
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  25%, 75% {
+    box-shadow: 28px 0 0 white, -28px 0 0 white, 0 28px 0 white, 0 -28px 0 white, 20px -20px 0 white, 20px 20px 0 white, -20px -20px 0 white, -20px 20px 0 white;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white;
+  }
+}
+@keyframes spin2 {
+  0%, 100% {
+    box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white;
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  25%, 75% {
+    box-shadow: 52px 0 0 white, -52px 0 0 white, 0 52px 0 white, 0 -52px 0 white, 38px -38px 0 white, 38px 38px 0 white, -38px -38px 0 white, -38px 38px 0 white;
+    background: transparent;
+  }
+  100% {
+    transform: rotate(-360deg);
+    box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white;
+  }
+}
